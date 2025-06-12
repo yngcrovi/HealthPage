@@ -1,0 +1,131 @@
+.popup{
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.body{
+    background-color: white;
+    width: 400px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.lineTodayTraining{
+    display: grid;
+    grid-template-columns: 70px 70px;
+}
+
+.lineSelectDate{
+    padding-top: 5px;
+}
+
+.lineTodayTraining{
+    padding-top: 5px;
+}
+
+.calories{
+    padding-top: 10px;
+}
+
+.inputCalories{
+    margin-top: 5px;
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.startTraining{
+    padding-top: 10px;
+}
+
+.lineStartTraining{
+    display: grid;
+    grid-template-columns: 70px 15px 70px 15px;
+    margin-top: 5px;
+}
+
+.inputStartHour{
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.textStartHour{
+    margin-top: 10px
+}
+
+.inputStartMinute{
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.textStartMinute{
+    margin-top: 10px
+}
+
+.endTraining{
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.lineEndTraining{
+    display: grid;
+    grid-template-columns: 70px 15px 70px 15px;
+    margin-top: 5px;
+}
+
+.inputEndHour{
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.textEndHour{
+    margin-top: 10px
+}
+
+.inputEndMinute{
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.textEndMinute{
+    margin-top: 10px
+}
+
+.comment{
+    padding-top: 10px;
+}
+
+.inputComment{
+    margin-top: 5px;
+    border-radius: 20px;
+    width: 300px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    resize: none;
+    border: 2px solid black;
+}
+

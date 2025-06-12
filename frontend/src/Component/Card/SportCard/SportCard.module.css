@@ -1,0 +1,15 @@
+.line1{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    column-gap: 10px;
+    padding-left: 10px;
+}
+
+.line2{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    column-gap: 10px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+

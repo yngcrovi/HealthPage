@@ -1,0 +1,162 @@
+.popup{
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.body{
+    background-color: white;
+    width: 400px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+.closePopup{
+    cursor: pointer;
+    color: red;
+    margin-left: 365px;
+    margin-top: 5px;
+}
+
+.divLT{
+    padding-top: 5px;
+}
+
+.divWeight{
+    padding-top: 10px;
+}
+
+.inputWeight{
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.textAN{
+    margin-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.inputAN{
+    width: 50px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.divAN{
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+.addAN{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.delAN{
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-top: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.selectTW{
+    width: 50px;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.buttonAddExercise{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.selectLT, .selectPOB, .selectPOM, .selectExercise{
+    display: grid;
+    grid-template-columns: 350px;
+    margin-left: 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.variantSelect{
+    color: black;
+}
+
+.buttonDelExercise{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonSendTraining{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.numberExercise{
+    font-size: 20px;
+    padding-left: 25px;
+    padding-top: 10px;
+}

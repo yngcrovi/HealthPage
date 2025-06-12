@@ -1,0 +1,53 @@
+.body {
+    width: 340px;
+    height: 330px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.image{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTejzVT0xmw612NJFSNffH7hHf9K3nQWX8uMQ&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 340px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nameCard{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.buttonPosition{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button{
+    cursor: pointer;
+    background: white;
+    border: 2px solid black;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 5px 10px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.button:hover{
+    letter-spacing: 0.15em;
+    border: 4px solid blue;
+    box-shadow: 0 0 35px blue;
+    color: blue;
+}
+
+.lineLastTraining{
+    margin-left: 10px;
+    margin-top: 30px;
+}

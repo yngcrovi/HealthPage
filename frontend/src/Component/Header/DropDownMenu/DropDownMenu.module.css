@@ -1,0 +1,37 @@
+.body{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    z-index: 2;
+    margin-left: 1070px;
+    margin-bottom: 20px;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.buttonProfile{
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    width: 150px;
+    font-size: 18px;
+}
+
+.buttonSettings{
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    width: 150px;
+    font-size: 18px;
+}
+
+.buttonProfile:hover{
+    background: rgb(200, 198, 198);
+    border-radius: 10px 0px 0px 0px;
+}
+
+.buttonSettings:hover{
+    background: rgb(200, 198, 198);
+    border-radius: 0px 0px 10px 10px;
+}

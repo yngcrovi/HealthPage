@@ -1,0 +1,89 @@
+.body{
+    width: 300px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 3px solid black;
+    margin-top: 200px;
+    margin-left: 550px;
+}
+
+.name{
+    font-size: 30px;
+    padding-left: 115px;
+    color: white;
+}
+
+.LogInField{
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.password, .mail{
+    width: 200px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    border: 3px solid black;
+}
+
+.checkBox{
+    cursor: pointer;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.textRememberMe{
+    padding-left: 10px;
+    color: white;
+}
+
+.lineRememberUser{
+    display: grid;
+    grid-template-columns: 20px 140px 200px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.notAuth{
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.registration{
+    padding-left: 5px;
+}
+
+.buttonLogin{
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: blue;
+    color: white;
+    width: 280px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.buttonLogin:hover{
+    letter-spacing: 0.15em;
+    border: 2px solid #000080;
+    box-shadow: 0 0 35px #000080;
+    color: white;
+}
+
+.buttonLogin:active{
+    border: 2px solid white;
+    box-shadow: 0 0 35px white;
+    color: white;
+}

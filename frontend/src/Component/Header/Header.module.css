@@ -1,0 +1,54 @@
+.header{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: blue;
+    
+}
+
+.elHeader{
+    margin-left: 175px;
+    display: grid;
+    grid-template-columns: 100px 600px 400px;
+}
+
+.logo{
+    font-size: 40px;
+    margin-top: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.linksSite{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 20px;
+    margin-left: 340px;
+}
+
+.linkText{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.iconMenu{
+    margin-top: 12px;
+    margin-left: 325px;
+}
+
+.singIn{
+    margin-top: 20px;
+    margin-left: 280px;
+}
+
+.buttonSingIn{
+    cursor: pointer;
+    background: inherit;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
