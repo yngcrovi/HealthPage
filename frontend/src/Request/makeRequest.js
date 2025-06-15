@@ -8,7 +8,7 @@ export default async function makeRequest(url, method, body){
             request = await requestGET(url)
             break;
         case 'POST':
-            request = null
+            request = await requestPOST(url, body)
             break;
     }
     switch (request.status) {

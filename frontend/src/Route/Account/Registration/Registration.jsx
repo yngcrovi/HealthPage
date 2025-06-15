@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Typography } from '@mui/material';
 import styles from './Registration.module.css'   
 import makeRequest from '../../../Request/makeRequest';
 import { requestPOST } from '../../../Request/makeRequest';
@@ -8,94 +7,55 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import Radio from '@mui/material/Radio';
 import { registrationURL, sportURL } from '../../../URL/URL';
+import RoundCheckbox from '../../../Component/Tag/RoundCheckbox';
+import Input from '../../../Component/Tag/Input';
 
 export default function Registration() {
-    const [sex, setSex] = useState('')
+    //Сделать выбор пола
+    const [sex, setSex] = useState(false);
+    const [sexMan, setSexMan] = useState(false);
+    const [sexWomen, setSexWomen] = useState(false);
+    const [rememberMe, setRememberMe] = useState(false);
 
-    const changeSex = (event) => {
-        setSex(event.target.value)
+    const styleRoundCheckbox = {
+        pointColor: "black", 
+        borderColor: "black"
     }
 
-    const sendRegistration = async () => {
-        let username = document.getElementById('username').value
-        let password = document.getElementById('password').value
-        let email = document.getElementById('email').value
-        let dateOfBirthday = document.getElementById('dateOfBirthday').value
-        let exp_refresh = document.getElementById('check-box-remember-me-registration').checked
-        let body = {
-            'username': username,
-            'password': password,
-            'email': email,
-            'date_of_birthday': dateOfBirthday,
-            'sex': sex, 
-            'exp_refresh': exp_refresh 
-        }
-        let response = await requestPOST(registrationURL, body)
-        switch(response.status){
-            case 200:
-                response = await response.json()
-                localStorage.setItem('refresh_token', response['refresh_token'])
-                break;
-            case 401:
-                alert("User with this param exist");
-                return
-        }
-        window.location.href = sportURL;
+    const changeSex = (event) => {
+        
     }
 
     return (
         <>
-        <div className={styles.bodyRegistrationField}>
-            <Typography variant='p' className={styles.name}>Зарегестрируйтесь</Typography>
-            <div className={styles.registrationField}>
-                <input
-                    className={styles.username}
-                    id='username'
-                    placeholder='Имя пользователя'
-                    type='text'
+        <form className={styles.formRegistration}>
+            <h2>Зарегестрируйтесь</h2>
+            <div className={styles.fieldsContainer}>
+                <Input placeholder="Имя" type="text" style={{height: "40px"}}/>
+                <Input placeholder="Фамилия" type="password" />
+                <Input placeholder="Имя пользователя" type="text" style={{height: "40px"}}/>
+                <Input placeholder="Пароль" type="password" />
+                <Input placeholder="Почта" type="text" style={{height: "40px"}}/>
+                <Input placeholder="Дата рождения" type="date" /> 
+            </div> 
+            <div className={styles.sexAndRememberMeContainer}>
+                <div className={styles.sexContainer}>
+                    <RoundCheckbox
+                        style={styleRoundCheckbox} text="М" onClick={changeSex} 
+                    />
+                    <RoundCheckbox
+                        style={styleRoundCheckbox} text="Ж" onClick={changeSex}
+                    />
+                </div>
+                <RoundCheckbox 
+                    className={styles.checkBox} type='checkbox' text="Запомнить меня?" 
+                    checked={rememberMe} setChecked={setRememberMe}
                 />
             </div>
-            <div className={styles.registrationField}>
-                <input
-                    className={styles.password}
-                    id='password'
-                    placeholder='Пароль'
-                    type='password'
-                />
+            <div className={styles.buttonRegistrationContainer}>
+                <button className={styles.buttonRegistration}>Отправить</button>
             </div>
-            <div className={styles.registrationField}>
-                <input
-                    className={styles.mail}
-                    id='email'
-                    placeholder='Почта'
-                    type='text'
-                />
-            </div>
-            <div className={styles.registrationField}>
-                <input
-                    className={styles.dateOfBirthday}
-                    id='dateOfBirthday'
-                    type='date'
-                />
-            </div>
-            <div className={styles.radioButtons}>
-            <FormControl>
-            <RadioGroup
-                row
-                value={sex}
-                onChange={changeSex}
-            >
-                <FormControlLabel value="man" control={<Radio />} label="М" />
-                <FormControlLabel value="woman" control={<Radio />} label="Ж" />
-            </RadioGroup>
-            </FormControl>
-            </div>
-            <div className={styles.lineRememberUser}>
-                    <input className={styles.checkBox} type='checkbox' id='check-box-remember-me-registration'/>
-                    <p className={styles.textRememberMe}>Запомнить меня</p>
-            </div>
-            <button className={styles.buttonRegistration} onClick={sendRegistration}>Отправить</button>
-        </div>
+        </form>
         </>
     )
 }

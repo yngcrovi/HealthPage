@@ -1,0 +1,25 @@
+.checkboxContainer{
+    display: flex;
+    gap: 5px;
+    justify-content: center; /* по горизонтали */
+    align-items: center;     /* по вертикали */
+}
+
+.checkbox{
+    display: flex;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;    
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointCheckbox{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+}
+
