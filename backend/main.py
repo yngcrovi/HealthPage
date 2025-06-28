@@ -18,7 +18,8 @@ app = FastAPI()
 
 origins = [
     'http://localhost:3000',
-    'http://127.0.0.1:8000'
+    'http://127.0.0.1:8000',
+    'https://weak-dancers-sneeze.loca.lt'
 ]
 
 # @app.on_event("startup")

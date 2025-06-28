@@ -1,30 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback, forwardRef } from 'react';
 import styles from "../../CSS/Component/Tag/RoundCheckbox.module.css"
 
-export default function RoundCheckbox(props) {
+const RoundCheckbox = forwardRef((props, ref) => {
     
-  return (
-    <div className={styles.checkboxContainer}>
-        <div 
-            className={styles.checkbox} 
-            onClick={props.onClick ? props.onClick : () => props.setChecked(!props.checked)}
-            style={{
-                borderColor: props.borderColor
-            }} 
-        >
+
+    return (
+        <div className={styles.checkboxContainer} ref={ref}>
             <div 
-                className={styles.pointCheckbox}
+                className={styles.checkbox} onClick={props.onClick}
                 style={{
-                    display: props.checked ? 'block' : 'none',
-                    backgroundColor: props.pointColor
-                }}
-            />
+                    borderColor: props.borderColor
+                }} 
+            >
+                <div 
+                    className={styles.pointCheckbox}
+                    style={{
+                        display: props.checked ? 'block' : 'none',
+                        backgroundColor: props.pointColor
+                    }}
+                />
+            </div>
+            {props.text && 
+            // Предусмотреть выделелние текста как отдельный параметр props
+                <p><strong>{props.text}</strong></p>
+            }
         </div>
-        {props.text && 
-        // Предусмотреть выделелние текста как отдельный параметр props
-            <p><strong>{props.text}</strong></p>
-        }
-    </div>
-  );
-}
+    );
+});
+
+export default RoundCheckbox;
+
 

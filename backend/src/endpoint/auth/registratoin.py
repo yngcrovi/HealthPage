@@ -39,7 +39,20 @@ async def user_exists(user_data: UserRegistration):
     else: 
         return user_data.model_dump()
 
-@route.post("")
+class UserParam(BaseModel):
+    id: int
+    firstName: str
+    lastName: str
+    username: str
+    languageCode: str
+    isPremium: bool
+
+@route.get("")
+async def test(param: UserParam):
+    print(param)
+    return JSONResponse(content={'dfasfa', 'fdasfa'})
+
+@route.post("/qwe")
 async def registration(
     user_data: Annotated[dict, Depends(user_exists)],
 ) -> JSONResponse:
